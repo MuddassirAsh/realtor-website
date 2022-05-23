@@ -3031,13 +3031,13 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #ffc800;
-  border-color: #ffc800;
+  background-color: rgb(67,67,67);
+  border-color: rgb(67,67,67)
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #d9aa00;
-  border-color: #cca000;
+  background-color: coral;
+  border-color: orangered
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -7693,7 +7693,7 @@ textarea.form-control-lg {
 }
 
 .text-uppercase {
-  text-transform: uppercase !important;
+  /* text-transform: uppercase !important; */
 }
 
 .text-capitalize {
@@ -11301,7 +11301,7 @@ p {
 }
 
 .page-section {
-  padding: 6rem 0;
+  padding: 5rem 0;
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
@@ -11362,9 +11362,9 @@ p {
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.95rem;
+  font-size: 1.0rem;
   color: #fff;
-  letter-spacing: 0.0625em;
+  letter-spacing: 0.086rem;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: coral;
@@ -11410,11 +11410,12 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/Ash.jpeg");
+  background-image: url("../assets/background2.jpeg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  background-size: contain;
+  background-size: cover;
+  height: 100vh;
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
@@ -11776,4 +11777,23 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+#about-section-text{
+  margin-top: -6rem;
+}
+
+#main-text{
+  color: rgb(110, 193, 228) !important; 
+  font-size: 58px !important;
+  font-weight: 600 !important;
+  width: 85%;
+}
+
+#ash-image{
+  width: 530px;
+  height: 450px;
+  margin-right: -6rem;
+  border-radius: 30%;
+  margin-top: -3rem;
 }
