@@ -11784,16 +11784,17 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 #main-text{
-  color: rgb(110, 193, 228) !important; 
-  font-size: 58px !important;
+  color: #1a84ce  !important; 
+  font-size: 45px !important;
   font-weight: 600 !important;
-  width: 85%;
+  width: 70%;
+  line-height: 1.2;
 }
 
 #ash-image{
   width: 530px;
   height: 450px;
-  margin-right: -6rem;
+  margin-right: 1rem;
   border-radius: 30%;
   margin-top: -3rem;
 }
