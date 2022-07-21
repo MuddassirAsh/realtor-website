@@ -440,6 +440,7 @@ img{
 }
 h2{
   font-size: 60px;
+  user-select: none;
 }
 .mobile h2{
   font-size: 40px !important;
@@ -449,6 +450,7 @@ h3{
   font-size: 16px;
   width: 80%;
   margin-left: 10%;
+  user-select: none;
 }
 .mobile h3{
   padding: 10px auto;
