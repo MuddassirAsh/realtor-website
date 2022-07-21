@@ -32,6 +32,23 @@ function switcher(){
         document.querySelector("ul").classList.add("hiddenmobile")
 }
 
+function sendMessage(){ // https://ocfnnj5izfgmkjk7jnlzzum5aa0bkeuh.lambda-url.us-east-1.on.aws
+    var xhttp = new XMLHttpRequest()
+    xhttp.open("POST", "https://ocfnnj5izfgmkjk7jnlzzum5aa0bkeuh.lambda-url.us-east-1.on.aws", true);
+    xhttp.setRequestHeader("Content-Type", "application/json")
+    xhttp.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200){
+            document.querySelector("#response").innerHTML='<span class="green">Message sent</span>'
+        }
+        else if (this.readyState == 4){
+            document.querySelector("#response").innerHTML='<span class="red">Message not sent</span>'
+        }
+    }
+    var data = {name:document.querySelector("#name").value,email:document.querySelector("#email").value,phone:document.querySelector("#phone").value,message:document.querySelector("#message").value}
+    xhttp.send(JSON.stringify(data))
+    return false
+}
+
 var extender = 0
 var lock = false
 function mover(a){
