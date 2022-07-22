@@ -49,6 +49,10 @@ function sendMessage(){ // https://ocfnnj5izfgmkjk7jnlzzum5aa0bkeuh.lambda-url.u
     return false
 }
 
+function formClear(){
+    document.querySelector("#transFrame").reset()
+}
+
 var extender = 0
 var lock = false
 function mover(a){
