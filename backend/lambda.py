@@ -3,11 +3,22 @@ import boto3
 from botocore.exceptions import ClientError
 
 def lambda_handler(event, context):
-    name = event['queryStringParameters']['name']
-    email = event['queryStringParameters']['email']
-    phone = event['queryStringParameters']['phone']
-    message = event['queryStringParameters']['message']
+    data = json.loads(event['body'])
+    name = ''
+    phone = ''
+    email = ''
+    message = ''
     
+    for i,j in data.items():
+        for i,j in data.items():
+            if i == 'name':
+                name = j 
+            elif i == 'email':
+                email = j
+            elif i == 'phone':
+                phone = j
+            else: 
+                message = j 
     # Replace sender@example.com with your "From" address.
     # This address must be verified with Amazon SES.
     SENDER = 'muddassircato@gmail.com'
@@ -37,8 +48,10 @@ def lambda_handler(event, context):
     <html>
     <head></head>
     <body>
+    <p>Hi Ash Realtor,</p>
     <p>{message}</p>
-    <p>You can reach {name} with this phone number -> {phone}</p>
+    <p>Kind regards, {name}<br>
+    <i>{email} {phone}</i>
     </body>
     </html>
     """
@@ -80,3 +93,12 @@ def lambda_handler(event, context):
         #ConfigurationSetName=CONFIGURATION_SET,
         
     )
+    return {
+        'statusCode': 200,
+        'headers': {
+        'Access-Control-Allow-Headers': '*',
+        'Access-Control-Allow-Methods': '*'
+        },
+        'body': json.dumps('Email Sent')
+        }
+

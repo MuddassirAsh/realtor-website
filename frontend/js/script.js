@@ -34,7 +34,7 @@ function switcher(){
 
 function sendMessage(){ // https://ocfnnj5izfgmkjk7jnlzzum5aa0bkeuh.lambda-url.us-east-1.on.aws
     var xhttp = new XMLHttpRequest()
-    xhttp.open("POST", "https://ocfnnj5izfgmkjk7jnlzzum5aa0bkeuh.lambda-url.us-east-1.on.aws", true);
+    xhttp.open("POST", "https://ocfnnj5izfgmkjk7jnlzzum5aa0bkeuh.lambda-url.us-east-1.on.aws");
     xhttp.setRequestHeader("Content-Type", "application/json")
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200){
@@ -44,7 +44,11 @@ function sendMessage(){ // https://ocfnnj5izfgmkjk7jnlzzum5aa0bkeuh.lambda-url.u
             document.querySelector("#response").innerHTML='<span class="red">Message not sent</span>'
         }
     }
-    var data = {name:document.querySelector("#name").value,email:document.querySelector("#email").value,phone:document.querySelector("#phone").value,message:document.querySelector("#message").value}
+    var data = { name:document.querySelector("#name").value,
+    email: document.querySelector("#email").value,
+    phone: document.querySelector("#phone").value,
+    message: document.querySelector("#message").value
+}
     xhttp.send(JSON.stringify(data))
     return false
 }
