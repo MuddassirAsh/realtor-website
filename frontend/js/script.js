@@ -32,9 +32,14 @@ function switcher(){
         document.querySelector("ul").classList.add("hiddenmobile")
 }
 
-function sendMessage(){ // https://ocfnnj5izfgmkjk7jnlzzum5aa0bkeuh.lambda-url.us-east-1.on.aws
+function sendMessage(){
     var xhttp = new XMLHttpRequest()
-    xhttp.open("POST", "https://ocfnnj5izfgmkjk7jnlzzum5aa0bkeuh.lambda-url.us-east-1.on.aws");
+    var urlPart1 = "https://"
+    var urlPart2 = "bmfmcz3pka36e0bnivf" 
+    var urlPart3 =  "nf5wdee72g7id"
+    var urlPart4 = ".lambda-url.us"
+    var urlPart5 = "-east-1.on.aws/"
+    xhttp.open("POST", urlPart1 + urlPart3 + urlPart2 + urlPart4 + urlPart5);
     xhttp.setRequestHeader("Content-Type", "application/json")
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200){
